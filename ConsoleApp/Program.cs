@@ -10,6 +10,13 @@ var bob = new Person("Bob", "Kelso");
 //ToString display : Person { FirstName = Bob, LastName = Kelso }
 System.Console.WriteLine(bob);
 
+//Deconstruct
+var (firstname, lastname) = bob;
+//Display Bob
+System.Console.WriteLine(firstname); 
+//Display Kelso
+System.Console.WriteLine(lastname);
+
 //Use with to shallow copy your record into another.
 var otherBob = bob with { LastName = "Dylan" };
 
