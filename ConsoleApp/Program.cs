@@ -8,7 +8,10 @@ if(args.Length > 0){
 }
 
 //Init only setter
-var p = new Point { X = 1, Y = 2 };
+var p = new Point { X = 1, Y = 2};
+
+System.Console.WriteLine(p.X); // 1
+System.Console.WriteLine(p.Y); // 2
 
 //Record
 var bob = new Person("Bob", "Kelso");
@@ -50,7 +53,7 @@ string ConvertAgeToLifeStage(int? age)
     return age switch
     {
         >= 18 => "Majeur",
-        >= 10 and < 18 => " Adolescent",
+        >= 10 and < 18 => "Adolescent",
         > 0 and < 10 => "Enfant",
         not null => "inconnue",
         _ => "erreur"
@@ -69,7 +72,7 @@ Doctor Kelso = new (new ("Bob", "Kelso"));
 //Display : Doctor { HumanBehindIt = Person { FirstName = Bob, LastName = Kelso } }
 System.Console.WriteLine(Kelso);
 
-struct Point
+class Point
 {
     public int X { get; init; }
     public int Y { get; init; }
