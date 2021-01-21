@@ -1,6 +1,12 @@
 ﻿//Top level statement
 System.Console.WriteLine("Hello World!");
 
+if(args.Length > 0){
+    //i.e //dotnet run coucou
+    //Display coucou
+    System.Console.WriteLine(args[0]); 
+}
+
 //Init only setter
 var p = new Point { X = 1, Y = 2 };
 
